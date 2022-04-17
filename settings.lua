@@ -95,6 +95,13 @@ mod_settings =
 						ui_description = "Minibosses spawn occasionally.",
 						value_default = true,
 						scope = MOD_SETTING_SCOPE_RUNTIME,
+					},{
+						id = "secret_setting",
+						ui_name = "Secret setting",
+						ui_description = "This used to be secret, but I have revealed it >:)",
+						value_default = "hello",
+						values = { {"hello","Hello"}, {"goodbye","Goodbye"}, {"surprise","Surprise!"} },
+						scope = MOD_SETTING_SCOPE_RUNTIME,
 					},
 				},
 			},
@@ -150,12 +157,6 @@ mod_settings =
 			{
 				ui_fn = mod_setting_vertical_spacing,
 				not_setting = true,
-			},
-			{
-				id = "secret_setting",
-				ui_name = "Secret setting",
-				value_default = true,
-				hidden = true,
 			},
 			{
 				id = "Text, not a setting",
