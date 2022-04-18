@@ -33,21 +33,21 @@ mod_settings =
 {
 	{
 		id = "_",
-		ui_name = "My first Noita mod, let's see what we can do.",
+		ui_name = "My first Noita mod, let's change the color of the Alchemist.",
 		not_setting = true,
 	},
 	{
 		category_id = "group_of_settings",
 		ui_name = "GROUP",
-		ui_description = "Multiple settings together",
+		ui_description = "Choose Colors:",
 		settings = {
 			{
-				id = "world_size",
-				ui_name = "World size",
-				ui_description = "How much world do you want?",
-				value_default = "small",
-				values = { {"small","Small"}, {"medium","Medium"}, {"huge","Huge"} },
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
+				id = "body_color",
+				ui_name = "Cloak Color",
+				ui_description = "Change the color of the robes.",
+				value_default = "default",
+				values = { {"default","Default"}, {"pink","Pink?"}, {"red","Red"}, {"green", "Green"} },
+				scope = MOD_SETTING_SCOPE_RUNTIME,
 				change_fn = mod_setting_change_callback, -- Called when the user interact with the settings widget.
 			},
 			{
@@ -57,53 +57,6 @@ mod_settings =
 				value_default = "easy",
 				values = { {"easy","Easy"}, {"normal","Normal"}, {"hard","Hard"} },
 				scope = MOD_SETTING_SCOPE_RUNTIME,
-			},
-			{
-				id = "minibosses_enabled",
-				ui_name = "Minibosses",
-				ui_description = "Minibosses spawn occasionally.",
-				value_default = true,
-				scope = MOD_SETTING_SCOPE_RUNTIME,
-			},
-			{
-				category_id = "sub_group_of_settings",
-				ui_name = "SUB GROUP WITH FOLDING",
-				ui_description = "Multiple settings together in a foldable group",
-				foldable = true,
-				_folded = true, -- this field will be automatically added to each gategory table to store the current folding state
-				settings = {
-					{
-						id = "world_size2",
-						ui_name = "World size 2",
-						ui_description = "How much world do you want?",
-						value_default = "small",
-						values = { {"small","Small"}, {"medium","Medium"}, {"huge","Huge"} },
-						scope = MOD_SETTING_SCOPE_NEW_GAME,
-						change_fn = mod_setting_change_callback, -- Called when the user interact with the settings widget.
-					},
-					{
-						id = "difficulty2",
-						ui_name = "Difficulty 2",
-						ui_description = "Challenge amount.",
-						value_default = "easy",
-						values = { {"easy","Easy"}, {"normal","Normal"}, {"hard","Hard"} },
-						scope = MOD_SETTING_SCOPE_RUNTIME,
-					},
-					{
-						id = "minibosses_enabled2",
-						ui_name = "Minibosses 2",
-						ui_description = "Minibosses spawn occasionally.",
-						value_default = true,
-						scope = MOD_SETTING_SCOPE_RUNTIME,
-					},{
-						id = "secret_setting",
-						ui_name = "Secret setting",
-						ui_description = "This used to be secret, but I have revealed it >:)",
-						value_default = "hello",
-						values = { {"hello","Hello"}, {"goodbye","Goodbye"}, {"surprise","Surprise!"} },
-						scope = MOD_SETTING_SCOPE_RUNTIME,
-					},
-				},
 			},
 		},
 	},
