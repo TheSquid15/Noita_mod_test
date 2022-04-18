@@ -51,11 +51,11 @@ mod_settings =
 				change_fn = mod_setting_change_callback, -- Called when the user interact with the settings widget.
 			},
 			{
-				id = "difficulty",
-				ui_name = "Difficulty",
-				ui_description = "Challenge amount.",
-				value_default = "easy",
-				values = { {"easy","Easy"}, {"normal","Normal"}, {"hard","Hard"} },
+				id = "cape_color",
+				ui_name = "Cape Color",
+				ui_description = "What color do you want your cape to be?",
+				value_default = "default",
+				values = { {"default","Default"}, {"pink","Pink?"}, {"red","Red"}, {"green", "Green"} },
 				scope = MOD_SETTING_SCOPE_RUNTIME,
 			},
 		},
@@ -66,13 +66,6 @@ mod_settings =
 		ui_description = "Multiple settings together",
 		settings = {
 			{
-				id = "custom_cape",
-				ui_name = "Custom cape",
-				ui_description = "",
-				value_default = true,
-				scope = MOD_SETTING_SCOPE_RUNTIME_RESTART,
-			},
-			{
 				id = "extra_health",
 				ui_name = "Extra starting health",
 				ui_description = "Extra HP",
@@ -81,22 +74,6 @@ mod_settings =
 				value_max = 10,
 				value_display_multiplier = 25,
 				value_display_formatting = " $0 HP",
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			},
-			{
-				id = "custom_events_enabled",
-				ui_name = "Custom events",
-				ui_description = "",
-				value_default = true,
-				scope = MOD_SETTING_SCOPE_RUNTIME,
-			},
-			{
-				id = "password",
-				ui_name = "Password",
-				ui_description = "Textbox.",
-				value_default = "root",
-				text_max_length = 20,
-				allowed_characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_0123456789",
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
 			{
@@ -110,15 +87,6 @@ mod_settings =
 			{
 				ui_fn = mod_setting_vertical_spacing,
 				not_setting = true,
-			},
-			{
-				id = "Text, not a setting",
-				ui_name = "Just a title, not a setting",
-				not_setting = true,
-			},
-			{
-				image_filename = "data/ui_gfx/game_over_menu/game_over.png",
-				ui_fn = mod_setting_image,
 			},
 		},
 	},
